@@ -1,11 +1,16 @@
 
-const TodoCard = ({children})=>{
+const TodoCard = (props)=>{
+    const {children , deleteTodoHandler , todoIndex ,editTodoHandler} = props
     return (
         <li className="todoItem" > 
            {children}
            <div className = "actionsContainer">
-                <i className="fa-solid fa-pen-to-square"></i>
-                <i className="fa-regular fa-trash-can"></i>
+                 <button onClick = {
+                       ()=> {editTodoHandler(todoIndex )}}>  
+                       <i className="fa-solid fa-pen-to-square"></i></button>
+                 <button  onClick={
+                       ()=>{deleteTodoHandler(todoIndex)}
+                    }> <i className="fa-regular fa-trash-can"></i></button>
             </div>
         </li>
     )

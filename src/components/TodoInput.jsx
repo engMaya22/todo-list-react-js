@@ -1,8 +1,6 @@
 import {useState} from "react";
-const TodoInput = ({handleAddTodos})=>{
-   
-    const [todoValue , setTodoValue] = useState('');
- 
+const TodoInput = ({handleAddTodos ,todoValue , setTodoValue})=>{
+    
     return (
         <header >
             <input value={todoValue} onChange={(e)=>setTodoValue(e.target.value)}  placeholder="Enter todo ... "/>

@@ -1,13 +1,8 @@
 
 import TodoCard from "./TodoCard"
 
-const TodoList = ()=>{
+const TodoList = ({todos})=>{
 
-    let todos  = [
-        'Go to the gym',
-        'Eat more fruits',
-        'Learn new skill'
-    ]
     return (
         <ul className="main">
            { todos.map((todo , todoIndex)=>(
